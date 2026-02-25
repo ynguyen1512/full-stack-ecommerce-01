@@ -171,7 +171,7 @@ const NavBar = () => {
         <ul className="hidden sm:flex items-center gap-6 text-sm font-medium text-primary">
           <li>
             <NavLink
-              to="/collection"
+              to="/"
               className={({ isActive }) =>
                 isActive ? "opacity-100" : "hover:opacity-80"
               }
@@ -226,7 +226,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            to="/collection"
+            to="/"
             className={({ isActive }) =>
               `py-3 border-b border-gray-100 ${isActive ? "text-primary" : "text-gray-700"}`
             }

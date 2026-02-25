@@ -20,7 +20,7 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState<CartItems>(
-    USE_CART_MOCK ? cartMock : {}
+    USE_CART_MOCK ? cartMock : {},
   );
   const [products, setProducts] = useState<Product[]>([]);
   const [token, setToken] = useState("");
@@ -65,7 +65,7 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const updateQuantity = async (
     itemId: string,
     size: string,
-    quantity: number
+    quantity: number,
   ) => {
     const cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
@@ -107,9 +107,9 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     }
   };
 
-  useEffect(() => {
-    getProductsData();
-  }, []);
+  // useEffect(() => {
+  //   getProductsData();
+  // }, []);
 
   useEffect(() => {
     if (!token && localStorage.getItem("token")) {
@@ -137,9 +137,7 @@ const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     setToken,
   };
 
-  return (
-    <ShopContext.Provider value={value}>{children}</ShopContext.Provider>
-  );
+  return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 
 export default ShopContextProvider;
