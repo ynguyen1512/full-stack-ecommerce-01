@@ -5,6 +5,7 @@ import { ShopContext } from "../context/ShopContext";
 import { LocationIcon } from "../assets/icons/LocationIcon";
 import PhoneIcon from "../assets/icons/PhoneIcon";
 import ChevronDownIcon from "../assets/icons/ChevronDownIcon";
+import { IoSearch } from "react-icons/io5";
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
@@ -33,18 +34,21 @@ const NavBar = () => {
   return (
     <nav className="bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4 py-4">
-        <Link to="/" className="flex flex-col items-start gap-2 shrink-0">
-          <p className="font-bold uppercase text-sm leading-tight text-primary">
-            NỆM RẠNG ĐÔNG
-          </p>
-          <p className="text-xs leading-tight text-primary">
-            NGỦ NGON - SỐNG KHOẺ
-          </p>
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src={assets.logo} alt="Nệm Rạng Đông" className="w-10 h-10" />
+          <div className="flex flex-col items-start gap-2">
+            <p className="font-bold uppercase text-sm leading-tight text-primary">
+              NỆM RẠNG ĐÔNG
+            </p>
+            <p className="text-xs leading-tight text-primary">
+              NGỦ NGON - SỐNG KHOẺ
+            </p>
+          </div>
         </Link>
 
         <form
           onSubmit={handleSearch}
-          className="flex-1 min-w-[200px] max-w-xl flex items-center rounded-full border-2 border-primary overflow-hidden"
+          className="flex-1 max-sm:hidden min-w-[200px] max-w-xl flex items-center rounded-full border-2 border-primary overflow-hidden"
         >
           <input
             type="text"
@@ -58,7 +62,7 @@ const NavBar = () => {
             className="p-2.5 flex items-center justify-center bg-primary text-white shrink-0"
             aria-label="Tìm kiếm"
           >
-            <img src={assets.search_icon} alt="" className="w-5 h-5 invert" />
+            <IoSearch className="w-5 h-5 text-white" />
           </button>
         </form>
 
@@ -203,7 +207,7 @@ const NavBar = () => {
           visible ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 text-xs md:text-sm">
           <div
             onClick={() => setVisible(false)}
             className="flex items-center gap-2 py-3 cursor-pointer text-gray-600"

@@ -38,7 +38,7 @@ function RelatedCard({ item }: RelatedCardProps) {
   return (
     <Link
       to={`/product/${item._id}`}
-      className="group flex flex-col shrink-0 w-[calc(50%-0.5rem)] sm:w-56 md:w-64 lg:w-72 rounded-xl bg-white shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
+      className="group max-sm:w-full flex flex-col shrink-0 w-[calc(50%-0.5rem)] sm:w-56 md:w-64 lg:w-72 rounded-xl bg-white shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
         <img

@@ -200,7 +200,7 @@ const Product = () => {
 
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
         {/* Left: Gallery - mobile full width + căn giữa, desktop max 55% */}
-        <div className="flex flex-col gap-3 w-full min-w-0 lg:max-w-[55%] -mx-4 sm:mx-0 px-0 sm:px-0 items-center sm:items-stretch">
+        <div className="flex flex-col gap-3 w-full min-w-0 lg:max-w-[55%] sm:mx-0 px-0 sm:px-0 items-center sm:items-stretch">
           {/* Wrapper chỉ ảnh chính → prev/next căn giữa theo ảnh; mobile full width, căn giữa màn hình */}
           <div className="relative w-full max-w-[100vw] min-w-0 md:w-[600px] min-h-[280px] sm:min-h-[360px] md:min-h-[420px] md:h-[500px] lg:h-[520px] rounded-none sm:rounded-xl overflow-hidden bg-gray-100">
             <img
@@ -469,7 +469,7 @@ const Product = () => {
             </button>
           </div>
 
-          <div className="flex items-center justify-between gap-2 w-full">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 w-full">
             <div className="flex flex-col py-1 gap-1 w-full bg-primary text-white rounded-lg">
               <button
                 type="button"

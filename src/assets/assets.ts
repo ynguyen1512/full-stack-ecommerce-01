@@ -56,7 +56,6 @@ import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
 
 
-import logo from './logo.png'
 import hero_img from './hero_img.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
@@ -77,6 +76,7 @@ import cross_icon from './cross_icon.png'
 import product1 from './product_1.jpg'
 import boCongThuong from './bocongthuong.png'
 import discount from './discount.png'
+import logo from './rang-dong-logo.png'
 
 export const assets = {
     logo,
@@ -99,7 +99,7 @@ export const assets = {
     cross_icon,
     product1,
     boCongThuong,
-    discount
+    discount,
 }
 
 export const products: Product[] = [

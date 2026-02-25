@@ -138,7 +138,7 @@ const Cart = () => {
             <h2 className="font-semibold text-gray-900 text-lg">
               Thông tin giao hàng
             </h2>
-            <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 space-y-4">
+            <div className="bg-white rounded-xl max-sm:p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Họ và tên <span className="text-red-500">*</span>
@@ -239,7 +239,7 @@ const Cart = () => {
 
           {/* Right: Sản phẩm + Tổng */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6">
+            <div className="bg-white rounded-xl border border-gray-200 p-5 max-sm:p-6">
               <h2 className="font-semibold text-gray-900 text-lg mb-4">
                 Tất cả {cartData.length} sản phẩm
               </h2>
@@ -262,7 +262,7 @@ const Cart = () => {
                   return (
                     <div
                       key={`${item._id}-${item.size}`}
-                      className="flex gap-5 p-4 rounded-xl border border-gray-200 bg-white items-start"
+                      className="flex flex-col gap-5 p-4 rounded-xl bg-white items-start"
                     >
                       {/* Hình ảnh sản phẩm */}
                       <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
@@ -305,12 +305,12 @@ const Cart = () => {
                       </div>
 
                       {/* Đơn giá x Số lượng + Tổng dòng + Xoá */}
-                      <div className="flex flex-col items-end flex-shrink-0">
+                      <div className="flex flex-col items-end flex-shrink-0 w-full">
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-gray-700 whitespace-nowrap">
                             {formatPriceVnd(productData.price)} x
                           </span>
-                          <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                          <div className="flex items-center rounded-lg overflow-hidden">
                             <button
                               type="button"
                               onClick={() =>
@@ -395,7 +395,7 @@ const Cart = () => {
             type="button"
             onClick={() => {
               const parts = [addressLine, ward, district, province].filter(
-                Boolean
+                Boolean,
               );
               navigate?.("/thank-you", {
                 state: {
